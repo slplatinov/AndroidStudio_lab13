@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView tvOut;
@@ -27,8 +28,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvOut.setText("Поздравляю! \n ты теперь \n КРУТОЙ ОРЕШЕК!!!");
                 btnOk.setEnabled(false);
+                Toast.makeText(getApplicationContext(), "Нажата кнопка ОК", Toast.LENGTH_LONG).show();
             }
         };
+
+
         btnOk.setOnClickListener(oclBtnOk);
         //btnOk.setEnabled(false);
     }
